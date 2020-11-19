@@ -6,8 +6,8 @@ public class Student {
     String dob;
     String id;
     String username;
-    ArrayList<Module> modules = new ArrayList<Module>();
-    ArrayList<Programme> programmes = new ArrayList<Programme>();
+    ArrayList<Module> modules = new ArrayList<>();
+    ArrayList<Programme> programmes = new ArrayList<>();
 
     public Student(String studentName, int studentAge, String studentDob, String studentId){
         name = studentName;
@@ -29,4 +29,24 @@ public class Student {
     public void addProgramme(Programme newProgramme){
         programmes.add(newProgramme);
     }
+
+    public void printStudentDetails(){
+        System.out.println("----------");
+        System.out.println("Student Profile:");
+        System.out.println("Student Name is: " + name);
+        System.out.println("Student ID is: " + id);
+        System.out.println("Student Age is: " + age);
+        System.out.println("Student DOB is: " + dob);
+        System.out.println("Student Username is: " + username);
+        System.out.println("Student is registered for the following modules:");
+        for(Module module : modules){
+            System.out.println("\t" + module.name);
+        }
+        System.out.println("Student is registered for the following programmes:");
+        for(Programme programme : programmes){
+            System.out.println("\t" + programme.name);
+        }
+        System.out.println("----------");
+    }
+
 }

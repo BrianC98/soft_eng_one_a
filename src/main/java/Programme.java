@@ -3,8 +3,8 @@ import org.joda.time.DateTime;
 
 public class Programme {
     String name;
-    ArrayList<Module> modules = new ArrayList<Module>();
-    ArrayList<Student> students = new ArrayList<Student>();
+    ArrayList<Module> modules = new ArrayList<>();
+    ArrayList<Student> students = new ArrayList<>();
     DateTime startDate;
     DateTime endDate;
 
@@ -22,4 +22,20 @@ public class Programme {
         students.add(newStudent);
     }
 
+    public void printProgrammeDetails(){
+        System.out.println("----------");
+        System.out.println("Programme Details:");
+        System.out.println("Programme Name is:" + name);
+        System.out.println("Programme Start Date is:" + startDate);
+        System.out.println("Programme End Date is:" + endDate);
+        System.out.println("Programme has the following students registered:");
+        for(Student student : students){
+            System.out.println("\t" + student.name);
+        }
+        System.out.println("Programme contains the following modules:");
+        for(Module module : modules){
+            System.out.println("\t" + module.name);
+        }
+        System.out.println("----------");
+    }
 }
