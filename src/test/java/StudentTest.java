@@ -4,10 +4,10 @@ import org.joda.time.DateTime;
 public class StudentTest extends TestCase {
 
     public void testGetUsername() {
-        Student student = new Student("John", 18, "01/01/2002", "123456789");
+        Student student = new Student("John Smith", 18, "01/01/2002", "123456789");
         String username = student.getUsername(student.name, student.age);
 
-        assertEquals("john18", username);
+        assertEquals("johnsmith18", username);
     }
 
     public void testAddModule() {

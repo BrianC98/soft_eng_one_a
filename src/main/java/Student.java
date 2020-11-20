@@ -19,7 +19,7 @@ public class Student {
 
     public String getUsername(String studentName, int studentAge){
 
-        return studentName.toLowerCase() + studentAge;
+        return studentName.toLowerCase().replaceAll("\\s+","") + studentAge;
     }
 
     public void addModule(Module newModule){
